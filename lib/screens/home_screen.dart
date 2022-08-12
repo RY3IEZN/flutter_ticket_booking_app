@@ -112,6 +112,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         .toList(),
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

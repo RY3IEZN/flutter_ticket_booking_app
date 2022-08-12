@@ -213,7 +213,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       Container(
                         padding: EdgeInsets.all(20),
                         width: 190,
-                        height: 237,
+                        height: 200,
                         decoration: BoxDecoration(
                           color: Color(0xff3a8888),
                           borderRadius: BorderRadius.circular(20),
@@ -229,13 +229,13 @@ class _SearchScreenState extends State<SearchScreen> {
                                   fontSize: 20),
                             ),
                             SizedBox(
-                              height: 15,
+                              height: 5,
                             ),
                             Text(
                               "Take the survey about our services and get discount",
                               style:
-                                  TextStyle(color: Colors.white, fontSize: 20),
-                            )
+                                  TextStyle(color: Colors.white, fontSize: 19),
+                            ),
                           ],
                         ),
                       ),
@@ -255,7 +255,7 @@ class _SearchScreenState extends State<SearchScreen> {
                             ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                   SizedBox(
@@ -263,10 +263,33 @@ class _SearchScreenState extends State<SearchScreen> {
                   ),
                   Container(
                     width: 190,
-                    height: 237,
+                    height: 200,
                     decoration: BoxDecoration(
                       color: Color(0xffec6545),
                       borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          "Safe Travels",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 20),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        RichText(
+                            text: TextSpan(children: [
+                          TextSpan(text: "Plane  "),
+                          TextSpan(text: "flight  "),
+                          TextSpan(text: "plane"),
+                        ]))
+                      ],
                     ),
                   ),
                 ],
