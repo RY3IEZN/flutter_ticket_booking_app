@@ -1,3 +1,4 @@
+import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ticket_booking_app/components/ticket_view.dart';
 import 'package:flutter_ticket_booking_app/models/hotel_info.dart';
@@ -272,9 +273,69 @@ class _TicketScreenState extends State<TicketScreen> {
                   ],
                 ),
               ),
-              dottedLines()
+              dottedLines(),
+              Container(
+                margin: EdgeInsets.only(left: 10, right: 10),
+                padding: EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20),
+                  ),
+                ),
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: BarcodeWidget(
+                      data: "www.unekue.com",
+                      barcode: Barcode.code128(),
+                      drawText: false,
+                      height: 70,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              // copun
+              Container(
+                child: TicketView(
+                  ticket: ticketList[0],
+                ),
+              ),
             ],
           ),
+          Positioned(
+            left: 20,
+            top: 300,
+            child: Container(
+              padding: EdgeInsets.all(3),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.black, width: 2)),
+              child: CircleAvatar(
+                maxRadius: 3,
+                backgroundColor: Colors.black,
+              ),
+            ),
+          ),
+          Positioned(
+            right: 20,
+            top: 300,
+            child: Container(
+              padding: EdgeInsets.all(3),
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.black, width: 2)),
+              child: CircleAvatar(
+                maxRadius: 3,
+                backgroundColor: Colors.black,
+              ),
+            ),
+          )
         ],
       ),
     );
