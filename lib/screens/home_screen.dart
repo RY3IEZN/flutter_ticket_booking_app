@@ -40,9 +40,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text(
                           "Book Tickets",
                           style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 26,
-                              color: Color(0xff3b3b3b)),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 26,
+                            color: Color(0xff3b3b3b),
+                          ),
                         ),
                       ],
                     ),
